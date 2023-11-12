@@ -3,9 +3,11 @@ from typing import Optional, Set, Tuple, List
 
 from send2trash import send2trash
 
+raw_extensions_lower = {'arw', 'cr2', 'cr3', 'nef', 'arw', 'raf', 'orf', 'rw2', 'dng', 'pef'}
+
 jpeg_extensions = {'jpg', 'jpeg', 'JPG', 'JPEG'}
-raw_extensions = {'arw', 'ARW'}
-raw_folders = {'raw', 'RAW'}
+raw_extensions = raw_extensions_lower.union({ext.upper() for ext in raw_extensions_lower})
+raw_folders = {'raw', 'RAW', 'Raw'}
 default_raw_folder = 'raw'
 
 assert default_raw_folder in raw_folders
