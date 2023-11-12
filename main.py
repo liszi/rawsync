@@ -32,7 +32,7 @@ def find_pairless_raws_and_jpegs(jpeg_files, raw_files) -> Tuple[List[str], List
     return list(raw_key_to_file[key] for key in pairless_raw), list(jpeg_key_to_file[key] for key in pairless_jpeg)
 
 
-if __name__ == '__main__':
+def main():
     print('Searching for raw folder...')
     raw_folder = find_raw_sub_folder_path(os.getcwd()) or find_raw_sub_folder_path(os.path.dirname(os.getcwd()))
     jpg_folder = os.getcwd()

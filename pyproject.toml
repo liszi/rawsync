@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools ~= 68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rawsync"
+version = "1.0.0"
+description = "Cross platform CLI tool for synchronizing raw and jpeg photos between two folders with removing pairless images."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT License" }
+keywords = ["cli", "photo", "camera", "file", "jpeg", "raw", "images"]
+authors = [
+    { name = "Bence Liszkai" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Utilities",
+    "Topic :: File Formats"
+]
+dependencies = [
+    "Send2Trash~=1.8.0"
+]
+
+[project.urls]
+Repository = "https://github.com/liszi/rawsync"
+
+
+
+[project.scripts]
+rawsync = "main:main"
