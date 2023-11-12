@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rawsync"
-version = "1.0.0"
+version = "2.0.0"
 description = "Cross platform CLI tool for synchronizing raw and jpeg photos between two folders with removing pairless images."
 readme = "README.md"
 requires-python = ">=3.7"
@@ -35,4 +35,5 @@ Repository = "https://github.com/liszi/rawsync"
 
 
 [project.scripts]
-rawsync = "main:main"
+rawsync = "main:raw_sync"
+rawpack = "main:raw_pack"
